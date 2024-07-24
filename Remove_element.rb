@@ -11,19 +11,21 @@ def remove_element(nums, val)
   for elemento in nums
     
     if elemento == val
-      nums[cont] = " "
+      nums[cont] = nil
       cont2 = cont2 + 1
     end
   cont = cont + 1
   end
-
   
-  return nums.size - cont2
+  k = nums.size - cont2
+  nums.compact!
+  return "#{k}, nums = #{nums}"
+
 end
-nums  = [0,1,2,2,3,0,4,2] 
+nums  = [3,2,2,3] 
 #nums.sort!
-val = 2
+val = 3
 
 n = remove_element(nums, val)
 
-puts "#{n}, nums = #{nums}"
+puts "#{n}"
