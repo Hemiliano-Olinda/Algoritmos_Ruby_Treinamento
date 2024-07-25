@@ -19,7 +19,7 @@ def remove_element(nums, val)
   
   k = nums.size - cont2
   nums.compact!
-  return "#{k}, nums = #{nums}"
+  return k
 
 end
 nums  = [3,2,2,3] 
@@ -28,4 +28,4 @@ val = 3
 
 n = remove_element(nums, val)
 
-puts "#{n}"
+puts "#{n} - #{nums}"
